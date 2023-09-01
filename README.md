@@ -1,9 +1,18 @@
-# KathaDNS
-DNS implementation with Katharà
+# DNS implementation with Katharà
 
-Network: 
 
 ![retebase](https://github.com/Ayaril/KathaDNS/assets/80338147/4ea547c7-1042-4857-b528-5e069e938c13)
+
+My network scheme is made of the following zones:
+  - root 
+  - *.org
+    - *.wikipedia.org
+  - *.com
+    - *.amazon.com
+    - *.google.com
+  - *.net
+
+## Device configuration
 
 The configuration file of each DNS server consist of: 
   - Zone
