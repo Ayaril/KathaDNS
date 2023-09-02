@@ -25,17 +25,17 @@ Each server have to implement **root zone** as hint type server and with **"."**
 
 For each server there is a **Database file** that begins with a **SOA (Start Of Authority)** record.
 DB files include the following data:
-  - **TTL**
+  - **TTL**:
     Time to Live specifies the amount of time a DNS record can be cached by a resolver or intermediary DNS server.
-  - **SOA**
+  - **SOA**:
     The SOA record defines administrative information about the zone, including the primary nameserver, the email address of the administrator, and various timing values
-  - **Serial**
+  - **Serial**:
     A version number for the zone file. Increment this value whenever you make changes to the zone.
-  - **Refresh time**
+  - **Refresh time**:
     How often secondary DNS servers should check for updates (in seconds)
-  - **Retry time**
+  - **Retry time**:
     How often secondary DNS servers should retry if the refresh fails (in seconds)
-  - **Expire time**
+  - **Expire time**:
     The maximum time a secondary DNS server should keep the zone data if it cannot refresh (in seconds)
   - **Negative cache TTL**
     
