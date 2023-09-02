@@ -38,6 +38,13 @@ DB files include the following data:
   - **Expire time**:
     The maximum time a secondary DNS server should keep the zone data if it cannot refresh (in seconds)
   - **Negative cache TTL**
+
+  - **NS**:
+    Name server records specify the authoritative DNS servers for the zone
+  - **A**:
+    Address records map hostnames to IP addresses
+  - **MX**:
+    Mail Exchange records specify the mail servers responsible for receiving email on behalf of the domain.
     
 They also include additional data regarding devices in the same zone.
 
