@@ -48,3 +48,4 @@ DB files include the following data:
     
 They also include additional data regarding devices in the same zone.
 
+**Statup files** are necessary to configure devices to send and receive correctly ping requests.
