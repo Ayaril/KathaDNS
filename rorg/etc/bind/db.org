@@ -1,0 +1,16 @@
+$TTL   60000
+@               IN      SOA     rorg.org.    root.rorg.org. (
+                        2023090200 ; serial
+                        3600 ; refresh
+                        900; retry
+                        3600000 ; expire
+                        86400 ; minimum ttl
+                        0 ; negative cache ttl
+                        )
+@                    IN      NS      rorg.org.
+rorg                 IN      A       192.168.0.2
+
+wikipedia            IN      NS      rwiki.wikipedia.org.
+rwiki.wikipedia      IN      A       192.168.0.21
+
+pc1		IN	A	192.168.0.211
