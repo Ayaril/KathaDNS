@@ -16,5 +16,5 @@ ramazon.amazon      IN      A       192.168.0.31
 google              IN      NS      rgoogle.google.com.
 rgoogle.google      IN      A       192.168.0.32 
 
-mymail              IN      NS      rmail.mymail.com.
+mymail              IN      MX      rmail.mymail.google.com.
 rmail.mymail        IN      A       192.168.0.33
