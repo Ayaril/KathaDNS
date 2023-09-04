@@ -49,6 +49,6 @@ They also include additional data regarding devices in the same zone.
 
 **Statup files** are necessary to configure devices to send and receive correctly ping requests.
 
-##Testing
-The testing of the network can be made with the command **dig**
+## Testing
+The testing of the network can be made with the command **dig**, a lookup utility used to query DNS servers and retrieve DNS information for domain names
 
