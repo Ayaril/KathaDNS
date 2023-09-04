@@ -1,14 +1,13 @@
 # DNS implementation with Katharà
 
+![network](https://github.com/Ayaril/KathaDNS/assets/80338147/3c529e87-f7b0-4545-b006-459feb684d26)
 
-![retebase](https://github.com/Ayaril/KathaDNS/assets/80338147/4ea547c7-1042-4857-b528-5e069e938c13)
 
 My network scheme is made of the following zones:
   - root 
   - *.org
-    - *.wikipedia.org
   - *.com
-    - *.amazon.com
+    - *.mymail.com
     - *.google.com
   - *.net
 
