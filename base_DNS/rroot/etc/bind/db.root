@@ -13,8 +13,5 @@ ROOT-SERVER.	IN	A	192.168.0.1
 com.		IN 	NS	rcom.com.
 rcom.com.	IN 	A	192.168.0.2
 
-org.		IN 	NS	rorg.org.
-rorg.org.	IN 	A	192.168.0.3
-
 net.		IN	NS	rnet.net.
 rnet.net.	IN	A	192.168.0.5

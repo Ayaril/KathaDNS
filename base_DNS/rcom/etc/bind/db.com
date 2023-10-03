@@ -8,8 +8,7 @@ $TTL    60000
                         )
 @               IN      NS      rcom.com.
 rcom            IN      A       192.168.0.2
+
 google         IN      NS       rgoogle.google.com.
 rgoogle.google IN      A        192.168.0.20
-mymail         IN      NS       rmail.mymail.com.
-rmail.mymail   IN      A	192.168.0.30
 

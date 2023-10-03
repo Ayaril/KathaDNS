@@ -1,1 +1,1 @@
-/sbin/ifconfig eth0 192.168.0.225 up
+ip address add 192.168.0.225/24 dev eth0
