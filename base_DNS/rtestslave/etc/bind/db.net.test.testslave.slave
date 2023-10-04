@@ -1,0 +1,12 @@
+$TTL    60000
+@               IN      SOA     rtestslave.testslave.test.net.    root.rtestslave.testslave.test.net. (
+                        2023090301 ; serial
+                        28 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        15 ; negative cache ttl
+                        )
+
+@                IN      NS      rtestslave.testslave.test.net.
+rtestslave       IN      A       192.168.0.40
+
