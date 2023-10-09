@@ -9,8 +9,8 @@ $TTL    60000
 @               IN      NS      rtest.test.net.
 rtest           IN      A       192.168.0.30
 
-testslave              IN      NS    rtestslave.testslave.test.net.
-rtestslave           IN      A       192.168.0.40
+testslave            IN      NS    rtestslave.testslave.test.net.
+rtestslave           IN      A     192.168.0.40
 
 
 pc2		IN	A	192.168.0.225
