@@ -1,0 +1,19 @@
+$TTL    60000
+@               IN      SOA     rtest.test.net.    root.rtest.test.net. (
+                        2023090301 ; serial
+                        28 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        15 ; negative cache ttl
+                        )
+@               IN      NS      rtest.test.net.
+rtest           IN      A       192.168.0.30
+
+tzone1          IN      NS    rtzone1.tzone1.test.net.
+rtzone1         IN      A     192.168.0.40
+
+tzone2          IN      NS    rtzone2.tzone2.test.net.
+rtzone2         IN      A     192.168.0.41
+
+
+pc2		IN	A	192.168.0.225
