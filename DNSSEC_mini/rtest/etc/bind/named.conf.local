@@ -1,5 +1,0 @@
-options {
-    inline-signing yes;
-    auto-dnssec maintain;
-    serial-update-method increment;
- };
