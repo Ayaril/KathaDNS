@@ -1,0 +1,13 @@
+$TTL    60000
+@               IN      SOA     rtzone.tzone.test.net.    root.rtzone.tzone.test.net. (
+                        2023101301 ; serial
+                        28 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        15 ; negative cache ttl
+                        )
+@               IN      NS      rtzone.tzone.test.net.
+rtzone          IN      A       192.168.0.40
+
+
+

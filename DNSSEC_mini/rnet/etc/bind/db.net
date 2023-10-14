@@ -1,0 +1,15 @@
+$TTL    60000
+@               IN      SOA     rnet.net.    root.rnet.net. (
+                        2023090301 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )                        
+                        
+@               IN      NS      rnet.net.
+rnet            IN      A       192.168.0.5
+
+test         IN      NS       rtest.test.net.
+rtest.test   IN      A        192.168.0.30
+

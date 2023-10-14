@@ -1,0 +1,12 @@
+$TTL    60000
+@               IN      SOA     rgoogle.google.com.    root.rgoogle.google.com. (
+                        2023090301 ; serial
+                        100 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        15 ; negative cache ttl
+                        )
+@               IN      NS      rgoogle.google.com.
+rgoogle         IN      A       192.168.0.20
+
+pc1		IN	A	192.168.0.220
