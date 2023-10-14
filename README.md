@@ -1,18 +1,15 @@
-# DNS implementation with Katharà
-
-![network](https://github.com/Ayaril/KathaDNS/assets/80338147/3c529e87-f7b0-4545-b006-459feb684d26)
-
+# DNSSEC implementation with Katharà
 
 My network scheme is made of the following zones:
-  - root 
-  - *.org
+  - root
   - *.com
-    - *.mymail.com
     - *.google.com
   - *.net
+    - *.test.net
+      - *.tzone.test.net
 
 ## Device configuration
-
+**Named.conf.*** defines each zone for which the server is responsible and provides configuration information per zone
 The configuration file of each DNS server consist of: 
   - Zone
   - Domain
@@ -48,6 +45,24 @@ DB files include the following data:
 They also include additional data regarding devices in the same zone.
 
 **Statup files** are necessary to configure devices to send and receive correctly ping requests.
+
+## DNS configuration 
+### Master configuration
+Each authority DNS server creates two pair of keys, a private used to digitally sign each record in the zone and a public published on the internet used to verify the signatures.
+
+In this environtment the DNSSEC extension will be configurated in the "test.net" domain
+In named.conf.options we have to set:
+  > dnssec-enable yes;
+  > dnssec-validation yes;
+  > dnssec-lookaside auto;
+  > key-directory "/var/cache/bind/keys";
+
+To create the keys we have to move in:
+ > cd /var/cache/bind/keys
+and execute the commands:
+> dnssec-keygen -a RSASHA256 -b 1280 test.net
+> dnssec-keygen -a RSASHA256 -b 2048 -f KSK test.net
+Those commands will create two files named Ktest.net.*.key and two files named Ktest.net.*.private
 
 ## Testing
 The testing of the network can be made with the command **dig**, a lookup utility used to query DNS servers and retrieve DNS information for domain names
