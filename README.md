@@ -53,16 +53,22 @@ Each authority DNS server creates two pair of keys, a private used to digitally 
 In this environtment the DNSSEC extension will be configurated in the "test.net" domain
 In named.conf.options we have to set:
   > dnssec-enable yes;
+> 
   > dnssec-validation yes;
+> 
   > dnssec-lookaside auto;
+> 
   > key-directory "/var/cache/bind/keys";
 
 To create the keys we have to move in:
  > cd /var/cache/bind/keys
+> 
 and execute the commands:
 > dnssec-keygen -a RSASHA256 -b 1280 test.net
+> 
 > dnssec-keygen -a RSASHA256 -b 2048 -f KSK test.net
-Those commands will create two files named Ktest.net.*.key and two files named Ktest.net.*.private
+> 
+Those commands will create two files named Ktest.net.+.key and two files named Ktest.net.+.private
 
 ## Testing
 The testing of the network can be made with the command **dig**, a lookup utility used to query DNS servers and retrieve DNS information for domain names
