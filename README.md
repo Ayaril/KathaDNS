@@ -46,23 +46,16 @@ They also include additional data regarding devices in the same zone.
 
 **Statup files** are necessary to configure devices to send and receive correctly ping requests.
 
-## DNS configuration 
+## DNSSEC configuration 
 ### Master configuration
 Each authority DNS server creates two pair of keys, a private used to digitally sign each record in the zone and a public published on the internet used to verify the signatures.
 
 In this environtment the DNSSEC extension will be configurated in the "test.net" domain
-In named.conf.options we have to set:
-  > dnssec-enable yes;
-> 
-  > dnssec-validation yes;
-> 
-  > dnssec-lookaside auto;
-> 
-  > key-directory "/var/cache/bind/keys";
 
-To create the keys we have to move in:
+The first step is to create the keys. In order to do it we have to move in:
  > cd /var/cache/bind/keys
-> 
+>
+
 and execute the commands:
 > dnssec-keygen -a RSASHA256 -b 1280 test.net
 > 
@@ -70,6 +63,35 @@ and execute the commands:
 > 
 Those commands will create two files named Ktest.net.+.key and two files named Ktest.net.+.private
 
+Once we have the keys we have to concatenate the public one to the zone file. In our environment we have to do:
+> cat /etc/bind/keys/Ktest.net.+008*.key >> db.net.test
+>
+Now our db.net.test will be something like this: 
+![Schermata del 2023-10-15 14-44-21](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/9b3d3725-5c2c-420e-be50-af4eeba4d33d)
+
+Once the file is setted we can configure the sign zone:
+> dnssec-signzone -t -g -o test.net db.net.test /etc/bind/keys/Ktest.net.+008+*.private
+>
+If the configuration was successful, we will get this result:
+![Schermata del 2023-10-15 14-48-11](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/d40a1f16-ec30-4aa6-843a-10a8b317c09f)
+In /etc/bind there will be two new files: **db.net.test.signed** and **dsset-test.net.**
+db.net.test.signed is the signed version of the zone file. To ensure the authenticity of DNS reply each resource record of a zone is signed using Publik Key Infrastructure.
+Now we have to include the new file in *etc/bind/named.conf*
+  > zone "test.net" {
+  >
+  > type master;
+  >
+  > file "/etc/bind/db.net.test.signed";
+  >
+  > };
+>
+Once we have modified the *named.conf* file we can use *systemctl restart named* to reload the file.
+
 ## Testing
 The testing of the network can be made with the command **dig**, a lookup utility used to query DNS servers and retrieve DNS information for domain names
-
+To test DNSSEC we can use:
+> dig DNSKEY test.net. @192.168.0.30
+>
+But it won't show the RRSIG
+> dig A test.net @localhost + noadditional +dnssec +multiline
+Will show every information about the DNSSEC configuration
