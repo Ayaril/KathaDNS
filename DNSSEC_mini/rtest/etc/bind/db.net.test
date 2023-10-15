@@ -13,3 +13,10 @@ tzone          IN      NS       rtzone.tzone.test.net.
 rtzone.tzone   IN      A        192.168.0.40
 
 pc2		IN	A	192.168.0.225
+ This is a key-signing key, keyid 10115, for test.net.
+; Created: 20231014090911 (Sat Oct 14 09:09:11 2023)
+; Publish: 20231014090911 (Sat Oct 14 09:09:11 2023)
+; Activate: 20231014090911 (Sat Oct 14 09:09:11 2023)
+test.net. IN DNSKEY 257 3 8 AwEAAa4t7rutZMqwzUAEJX8OhZrjTsVNzVbWloAtq2CS68w+UqgPKI+p cR5oDZoHlj+IFZiSjivxapJNhMmhpIkSI+gupc5E3YqqUqp/T0awiFau sSskVivWqu+Iqn49ZW5xAReSWyqgvq+h0CEUJWlZJymOYHy9qVs9cRSH f620sJb01UwzGhI7mlKCVymcLbNkHUgUFYp+IEqKbPhoKq2Iih8TtoKT tVOyuDYQQPx4y5QKY2Yi+8TNzBnMw5IU3dg7eys+D94CEJYRVj6SA9PD G3FYll1Lp+jFNZpgcl0VgZiU4S+VqUGynfeILmR3b+Mzf28z2y3AbBM5 MfGE63enURs=
+
+

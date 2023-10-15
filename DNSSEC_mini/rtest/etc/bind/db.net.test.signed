@@ -1,0 +1,124 @@
+; File written on Sun Oct 15 12:47:36 2023
+; dnssec_signzone version 9.18.19-1~deb12u1-Debian
+test.net.		60000	IN SOA	rtest.test.net. root.rtest.test.net. (
+					2023090301 ; serial
+					28         ; refresh (28 seconds)
+					14400      ; retry (4 hours)
+					3600000    ; expire (5 weeks 6 days 16 hours)
+					15         ; minimum (15 seconds)
+					)
+			60000	RRSIG	SOA 8 2 60000 (
+					20231114114736 20231015114736 63244 test.net.
+					ZqTMWKNF3CFtlDnfH35vjmk8vCJxzmR2S5iJ
+					fZK0Va7b6WfNh9ZqSO0P7HjE/TaGKnq4S+bx
+					j3H+fArkPoxPMJxA8FGwCloEcoonIHhcgHJb
+					csXbpQ5IFSBgeR0NUEZ6XdKCMHrq80ae9AWL
+					mykjLsqhnanYBvlJ7y3oJyzgcUF/T1RSXqTx
+					nZjAyCpFycs4wuvtMIotAUDKtfXRbHWq2w== )
+			60000	NS	rtest.test.net.
+			60000	RRSIG	NS 8 2 60000 (
+					20231114114736 20231015114736 63244 test.net.
+					Y6irgf9qPn+Qyck4ixyGx/9wRTvNPqH1IEj6
+					omjzKU+m3YHLRhY2WqhDKc0AAkSMUcU6TRv3
+					COhNir367TosTDpOlsrzdBB7EoCMHx/8Mo8E
+					QLUK1uh7fmFcEb7xufkM25emn4+XgloNewfX
+					2EyFmEsz7NPX7T/zifT/xYRXDwIQ1W1hqjh7
+					bHn+PGR+HrjIjjUhiwSVipmwlGU0rlZuxA== )
+			15	NSEC	pc2.test.net. NS SOA RRSIG NSEC DNSKEY
+			15	RRSIG	NSEC 8 2 15 (
+					20231114114736 20231015114736 63244 test.net.
+					j7pdARWj9biQvq2qX2mO5injUc48t2TiXn2c
+					U/n2Ha7plzqcvrZaLulyjtzvuKV70f5EOVDz
+					DklQp8xvrgfZJ1PVFjjOpG0yuN/Vsq+XK8Fq
+					J8OZGshRvGPxxVjQDilkDTnwWqmFk7yCEmvf
+					X6KZB+ngnPAmMFnu5ERUdcdFickLFRnNvml+
+					7SkqMr5auM88JfqVbemwUZaiQK0d/tYlcA== )
+			60000	DNSKEY	256 3 8 (
+					AwEAAZ95tqOOECQhOLQQPbWHLQ18kkPd/XG7
+					w2r73V9oKLU+glhU9NEUqDGhKo29fYMg2siC
+					ZPiwui8VG/luCaSVHA2ITZR65Lc0UffP8WfU
+					eOKj+DdDNrSS8UJYvtRlvSGIGTBPZZHMtsWT
+					1SkgtwhOF/JZB7eSBPJwJQYC3j99gFSSysCn
+					dQ3yGrwSbV1lEebB8/7amjGB1lNgF8uGsQ3K
+					ycU=
+					) ; ZSK; alg = RSASHA256 ; key id = 63244
+			60000	DNSKEY	257 3 8 (
+					AwEAAa4t7rutZMqwzUAEJX8OhZrjTsVNzVbW
+					loAtq2CS68w+UqgPKI+pcR5oDZoHlj+IFZiS
+					jivxapJNhMmhpIkSI+gupc5E3YqqUqp/T0aw
+					iFausSskVivWqu+Iqn49ZW5xAReSWyqgvq+h
+					0CEUJWlZJymOYHy9qVs9cRSHf620sJb01Uwz
+					GhI7mlKCVymcLbNkHUgUFYp+IEqKbPhoKq2I
+					ih8TtoKTtVOyuDYQQPx4y5QKY2Yi+8TNzBnM
+					w5IU3dg7eys+D94CEJYRVj6SA9PDG3FYll1L
+					p+jFNZpgcl0VgZiU4S+VqUGynfeILmR3b+Mz
+					f28z2y3AbBM5MfGE63enURs=
+					) ; KSK; alg = RSASHA256 ; key id = 10115
+			60000	RRSIG	DNSKEY 8 2 60000 (
+					20231114114736 20231015114736 10115 test.net.
+					CMDbtvenFJyoS5w4podsvKcKGwkuEdiY+hEn
+					TIVvBlpScWejHqaPXRYgCbNkJbOKDEg93OcE
+					Aoi6uKH1/GvuoMVy30+kJHjJIvPwfpYEpM36
+					nS86ugBHZvGNFgGl6CV2OyMAUprtEAkOMo2e
+					GJBXxNsKtB5EQz7D/NXxuOgWl4HGf2QLh5Af
+					3jxY4cC9zwzKg5kmU1tMSvJi77n5G+orPstp
+					2y/ksGtFmxoZtFOA6IoaUxmDe/z1PjHgytM7
+					5BeeaSiCs2h819STspfMN4yOm7zWsBzH9pcr
+					DyDCqNcFqQPhls7XcYCD24BItpLcaiVzaZk5
+					l/tcyitRKvyidRaQww== )
+			60000	RRSIG	DNSKEY 8 2 60000 (
+					20231114114736 20231015114736 63244 test.net.
+					I5aWidvdoZ4wtdkK+J7Idw8ThAPwVMMxMEOm
+					/g9brWJ9G102ImCdpO4uYhaXEL2TGJdn1GWz
+					MM1DqCnEC94iiUOGKWgON8r/SeaoJwl7fY7q
+					ekj9bjLZEgMZHVdXkhIHBDDJp75LkSz9aniG
+					Zy+b5at1pSVsyVfSD6eqR/d7EI6sU9uOAbXS
+					Hhy5u8lc3wJ2LM63OkrgQZy7ybV8ZVNcCQ== )
+rtzone.tzone.test.net.	60000	IN A	192.168.0.40
+tzone.test.net.		60000	IN NS	rtzone.tzone.test.net.
+			15	NSEC	test.net. NS RRSIG NSEC
+			15	RRSIG	NSEC 8 3 15 (
+					20231114114736 20231015114736 63244 test.net.
+					JSXBdZjy7i5B2WKPZp84iViGBC16U4XmA6d8
+					Qz3MuWyN9ImbXUsXu5SQDA5lH1j7zFSH72li
+					F66Zg9AIunDJYu3cfQfDfGW/LGb+WzCC7Rs5
+					GfFCd0l1iLpN1jaOW/9ibcUeA33s4UhKenBx
+					UD0x0GJ0FYb3+gCjlUJSroclrKxexmYIaOG1
+					0mas0LzAroN1N9XSIrg9cUdmKtCJihhjgQ== )
+rtest.test.net.		60000	IN A	192.168.0.30
+			60000	RRSIG	A 8 3 60000 (
+					20231114114736 20231015114736 63244 test.net.
+					f18yRjxPqLfPgRD5aSEGpdckT16UJzzimmeE
+					ajs5SCDI7W5Brx+P9Ro3bvgCNK+ngkzms93E
+					el6IFXdm3KdM7dTrwvcN4ezRwDyPBdNX2UFQ
+					30EpwROx0Okv9WD9WeNGiCtxZvQNfM0UPOX/
+					toyEIrJPShbLQcYCXgqwgmOg+012TCRfgy29
+					CL6g4Wyy10bLNUMppp/zwF1tyRpBcPGl5w== )
+			15	NSEC	tzone.test.net. A RRSIG NSEC
+			15	RRSIG	NSEC 8 3 15 (
+					20231114114736 20231015114736 63244 test.net.
+					TYd/IK1HsqHe0QMh8TT2sxOlPs09syz0ipVD
+					/JPyeHETUpexLrlzCACzCJKJdzFMCT6IyWnm
+					zmnP3hR9GPsrLyaIVj0o7t/DHptCYgPom9ib
+					vsteWacDU5+VU2wzfa0QHAmgL6L46DTOR1HG
+					bOutLBUdBG8722oFVUyQlUsEwbYeIJIrmFqo
+					/0rgp6TUu30mZno4nvorL963owsGk7tFvA== )
+pc2.test.net.		60000	IN A	192.168.0.225
+			60000	RRSIG	A 8 3 60000 (
+					20231114114736 20231015114736 63244 test.net.
+					gMS8gZ1RYnUwHHAiU9a0XfIE+Ozi1AyYckPJ
+					STnwJFewL+bqmC2ySjjO4yGnUiNuDql6tCOG
+					Wzmw/0Pzd1eY9YZTRbwhzjnJjDPSYPGMnu/8
+					pmUAOvHmagzluJFkhYeAk4nUHdhc53E2JZ8I
+					+FJ0JGV0l7RE1p9cjmPGMmLRQXIhJD3TWIDs
+					u6Vwt8uPpS45gE4XJyLj2BVwKDDq7cMB8A== )
+			15	NSEC	rtest.test.net. A RRSIG NSEC
+			15	RRSIG	NSEC 8 3 15 (
+					20231114114736 20231015114736 63244 test.net.
+					SWrg3LDYSNYu3Zp2RAUCClJju33I6FCS4f/F
+					UQ5OAEH5mrtSC0ECvWqXJt/IgJW1s7luP7sc
+					iHP/7yoAYNTZdR48bdJpGl6UkSWJlDtgxpwb
+					ZiwxiTDV5JWbym0z/JgG9+tn8/xut40qWauD
+					9bqsqvN+n+TcqPxN5IWblRW2HIw7giXj6jt7
+					0e/h1wp7hqz40lIzyynP7yoKfECp0JXO4g== )
+
