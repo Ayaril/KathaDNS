@@ -60,7 +60,8 @@ and execute the commands:
 > dnssec-keygen -a RSASHA256 -b 1280 test.net
 > 
 > dnssec-keygen -a RSASHA256 -b 2048 -f KSK test.net
-> 
+![Schermata del 2023-10-21 19-30-31](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/c28678ca-67c9-413e-a3d8-4de711b54c6b)
+
 Those commands will create two files named Ktest.net.+.key and two files named Ktest.net.+.private
 
 Once we have the keys we have to concatenate the public one to the zone file. In our environment we have to do:
@@ -85,6 +86,8 @@ Now we have to include the new file in *etc/bind/named.conf*
   >
   > };
 >
+![Schermata del 2023-10-21 19-42-26](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/60af3f47-177b-47b1-8f7b-f45e9613e58f)
+
 Once we have modified the *named.conf* file we can use *systemctl restart named* to reload the file.
 
 ## Testing
@@ -95,3 +98,8 @@ To test DNSSEC we can use:
 But it won't show the RRSIG
 > dig A test.net @localhost + noadditional +dnssec +multiline
 Will show every information about the DNSSEC configuration
+![Schermata del 2023-10-21 19-43-39](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/7bb311e0-0d0a-496c-821d-b5e7cfeff6ca)
+
+To ensure that dnssec works we can also use the command **dnssec-verify**
+![Schermata del 2023-10-21 19-50-35](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/f11b317d-07f1-4a0b-8c3b-4dc82694c469)
+
