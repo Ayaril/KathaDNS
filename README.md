@@ -57,7 +57,7 @@ The first step is to create the keys. In order to do it we have to move in:
 >
 
 and execute the commands:
-> dnssec-keygen -a RSASHA256 -b 1280 test.net
+> dnssec-keygen -a RSASHA256 -b 1024 test.net
 > 
 > dnssec-keygen -a RSASHA256 -b 2048 -f KSK test.net
 ![Schermata del 2023-10-21 19-30-31](https://github.com/Ayaril/KathaDNSSEC/assets/80338147/c28678ca-67c9-413e-a3d8-4de711b54c6b)
